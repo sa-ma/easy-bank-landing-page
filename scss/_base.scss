@@ -1,0 +1,28 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.7;
+}
+
+// Colors
+
+// Primary
+$color-dark-blue: hsl(233, 26%, 24%);
+$color-lime-green: hsl(136, 65%, 51%);
+$color-bright-cyan: hsl(192, 70%, 51%);
+
+// Neutral
+$color-grayish-blue: hsl(233, 8%, 62%);
+$color-light-grayish-blue: hsl(220, 16%, 96%);
+$color-very-light-gray: hsl(0, 0%, 98%);
+$color-white: hsl(0, 0%, 100%);
