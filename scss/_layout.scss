@@ -1,0 +1,87 @@
+.header {
+  display: flex;
+  padding: 0 2rem;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  @include md {
+    max-width: 100vh;
+    padding: 1rem 2rem;
+    height: auto;
+  }
+  &__logo {
+    &:link,
+    &:visited {
+      text-decoration: none;
+    }
+    img {
+      @include md {
+        vertical-align: middle;
+      }
+    }
+  }
+
+  &__menu {
+    display: flex;
+    margin: 2.5rem 0;
+    align-items: center;
+    &__navigation {
+      list-style: none;
+      display: flex;
+      @include md {
+        display: none;
+        position: absolute;
+        top: 12rem;
+        left: 1rem;
+        right: 1rem;
+        margin: 0 1rem;
+        border: 2px solid $color-very-light-gray;
+        background-color: $color-white;
+        z-index: 999;
+        border-radius: 8px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      li {
+        margin: 0 2rem;
+        @include md {
+          margin: 0;
+        }
+      }
+      li a {
+        &:link,
+        &:visited {
+          text-decoration: none;
+          text-align: center;
+          color: $color-grayish-blue;
+          font-size: 1.6rem;
+          font-weight: 300;
+          display: block;
+          padding-bottom: 1.5rem;
+          border-bottom: 3px solid transparent;
+          @include md {
+            padding: 1rem;
+          }
+        }
+        &:hover {
+          color: $color-dark-blue;
+          font-weight: 400;
+          border: 0;
+          border-bottom: 3px solid transparent;
+          background-origin: border-box;
+          background-clip: padding-box, border-box;
+          background-image: linear-gradient(white, white),
+            linear-gradient(to right, $color-lime-green, $color-bright-cyan);
+        }
+        &:active {
+          transform: translateY(2px);
+        }
+      }
+    }
+  }
+}
