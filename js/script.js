@@ -3,12 +3,13 @@ const navbar = document.querySelector('.header__menu__navigation');
 
 navbarToggle.addEventListener('click', () => {
   if (navbar.style.display === 'none' || navbar.style.display === '') {
-    document.querySelector('main').style.backgroundColor = 'hsl(233, 8%, 62%)';
+    document.querySelector('main').style.backgroundColor = 'rgba(0,0,0,0.2)';
     document
       .querySelector('.responsive-menu img')
       .setAttribute('src', 'images/icon-close.svg');
     navbar.style.display = 'flex';
   } else {
+    document.querySelector('main').style.backgroundColor = 'none';
     document
       .querySelector('.responsive-menu img')
       .setAttribute('src', 'images/icon-hamburger.svg');

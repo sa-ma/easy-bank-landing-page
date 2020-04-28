@@ -1,15 +1,16 @@
 .header {
   display: flex;
-  padding: 0 2rem;
+  padding: 0 8rem;
   justify-content: space-between;
   align-items: center;
-  max-width: 1140px;
   width: 100%;
   margin: 0 auto;
   position: relative;
+  z-index: 999;
+  background-color: $color-white;
   @include md {
     max-width: 100vh;
-    padding: 1rem 2rem;
+    padding: 2rem;
     height: auto;
   }
   &__logo {
@@ -18,6 +19,7 @@
       text-decoration: none;
     }
     img {
+      vertical-align: bottom;
       @include md {
         vertical-align: middle;
       }
@@ -26,8 +28,11 @@
 
   &__menu {
     display: flex;
-    margin: 2.5rem 0;
+    margin: 2.5rem 0 0;
     align-items: center;
+    @include md {
+      margin: 0;
+    }
     &__navigation {
       list-style: none;
       display: flex;
@@ -81,6 +86,57 @@
         &:active {
           transform: translateY(2px);
         }
+      }
+    }
+  }
+}
+.hero {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  @include md {
+    flex-direction: column-reverse;
+  }
+  &__content {
+    padding: 10rem 8rem;
+    width: 60%;
+    margin: 0 auto;
+    @include md {
+      width: 100%;
+      padding: 0 2rem;
+      text-align: center;
+    }
+    &__header {
+      font-size: 6rem;
+      font-weight: 300;
+      color: $color-dark-blue;
+      line-height: 6rem;
+      @include sm {
+        font-size: 4rem;
+      }
+    }
+    &__subtitle {
+      color: $color-grayish-blue;
+      margin: 3rem 0;
+    }
+  }
+
+  &__image {
+    background: url('../images/bg-intro-desktop.svg') no-repeat;
+    background-size: 150% 80%;
+    z-index: -999;
+    transform: translateY(-13%);
+    @include md {
+      background: url('../images/bg-intro-mobile.svg') no-repeat;
+      background-size: cover;
+      margin-top: -23%;
+      padding: 1rem 0;
+    }
+    img {
+      display: block;
+      margin-left: 12rem;
+      @include md {
+        margin-left: 0;
       }
     }
   }
