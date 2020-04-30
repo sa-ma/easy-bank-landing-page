@@ -9,7 +9,7 @@ navbarToggle.addEventListener('click', () => {
       .setAttribute('src', 'images/icon-close.svg');
     navbar.style.display = 'flex';
   } else {
-    document.querySelector('main').style.backgroundColor = 'none';
+    document.querySelector('main').style.background = 'none';
     document
       .querySelector('.responsive-menu img')
       .setAttribute('src', 'images/icon-hamburger.svg');

@@ -54,6 +54,9 @@
   grid-gap: 5rem;
   grid-template-columns: auto auto auto auto;
   justify-content: space-between;
+  @include lg {
+    grid-template-columns: auto auto auto;
+  }
   @include md {
     grid-template-columns: auto auto;
     text-align: center;

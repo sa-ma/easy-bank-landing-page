@@ -157,7 +157,7 @@
   @include md {
     margin: 0;
     padding: 2rem;
-    margin: 3rem 0;
+    margin: 6rem 0;
   }
   &__intro {
     width: 50%;
@@ -193,5 +193,51 @@
   &__content {
     color: $color-grayish-blue;
     font-size: 1.6rem;
+  }
+}
+
+.blog {
+  width: 100%;
+  padding: 2rem 8rem;
+  @include md {
+    padding: 2rem;
+  }
+  &__header {
+    font-size: 3rem;
+    font-weight: 300;
+    color: $color-dark-blue;
+  }
+  &__image {
+    max-width: 261px;
+    max-height: 173px;
+    width: 100%;
+    @include md {
+      max-width: 100%;
+    }
+  }
+  &__author {
+    color: $color-grayish-blue;
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin: 1rem 0;
+  }
+  &__title {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: $color-dark-blue;
+      margin: 1rem 0;
+      font-weight: 400;
+      line-height: 1rem;
+    }
+    &:hover {
+      color: $color-lime-green;
+    }
+  }
+  &__content {
+    font-size: 1.6rem;
+    color: $color-grayish-blue;
+    font-weight: 300;
+    margin: 1rem 0;
   }
 }
