@@ -10,6 +10,12 @@
   }
 }
 
+@mixin lg {
+  @media (max-width: #{$breakpoint-ipad}) {
+    @content;
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -24,6 +30,7 @@ body {
   font-family: 'Public Sans', sans-serif;
   font-size: 1.8rem;
   line-height: 1.7;
+  overflow-x: hidden;
 }
 
 // Colors
@@ -40,6 +47,7 @@ $color-very-light-gray: hsl(0, 0%, 98%);
 $color-white: hsl(0, 0%, 100%);
 
 // Breakpoints
+$breakpoint-ipad: 1024px;
 $breakpoint-tablet: 768px;
 $breakpoint-mobile: 499px;
 
