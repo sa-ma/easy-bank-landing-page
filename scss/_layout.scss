@@ -241,3 +241,58 @@
     margin: 1rem 0;
   }
 }
+
+.footer {
+  width: 100%;
+  padding: 4rem 8rem;
+  background-color: $color-dark-blue;
+  color: $color-grayish-blue;
+  @include md {
+    padding: 4rem 2rem;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      color: $color-white;
+      text-decoration: none;
+    }
+    &:hover {
+      color: $color-lime-green;
+    }
+  }
+
+  img {
+    object-fit: none;
+    width: auto;
+  }
+  &__grid {
+    display: flex;
+    justify-content: space-between;
+    @include md {
+      flex-direction: column;
+      justify-content: center;
+    }
+    &__item {
+      display: flex;
+      flex-grow: 1;
+      justify-content: space-between;
+      flex-direction: column;
+      height: 12rem;
+      @include md {
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      &-2 {
+        @include md {
+          margin-top: 2rem;
+        }
+      }
+      &-3 {
+        @include md {
+          margin-bottom: 4rem;
+        }
+      }
+    }
+  }
+}

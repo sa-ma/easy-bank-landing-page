@@ -51,12 +51,27 @@ $breakpoint-ipad: 1024px;
 $breakpoint-tablet: 768px;
 $breakpoint-mobile: 499px;
 
-// Hack so I can style mobile devices without the images disturbing
-img {
-  width: 100%;
+// Typography
+.copyright,
+.credits {
+  font-size: 1.4rem;
 }
 
+// utilities
 .u-box-padding {
   text-align: left;
   padding: 2rem;
+}
+.u-footer-text {
+  text-align: right;
+  @include md {
+    margin-top: 2rem;
+    text-align: center;
+  }
+}
+.u-display-block {
+  display: block;
+}
+.u-grid-item-xl {
+  flex: 2;
 }
