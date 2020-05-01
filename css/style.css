@@ -45,6 +45,10 @@ body {
   flex: 2;
 }
 
+span[aria-hidden='true'] {
+  display: none;
+}
+
 .header {
   display: flex;
   padding: 0 8rem;

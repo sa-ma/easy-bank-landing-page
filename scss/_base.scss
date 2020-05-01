@@ -75,3 +75,7 @@ $breakpoint-mobile: 499px;
 .u-grid-item-xl {
   flex: 2;
 }
+
+span[aria-hidden='true'] {
+  display: none;
+}
